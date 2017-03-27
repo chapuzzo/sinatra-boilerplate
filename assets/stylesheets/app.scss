@@ -1,0 +1,35 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+%flex_column {
+  display: flex;
+  flex-direction: column;
+}
+
+%flex_centered {
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  @extend %flex_column;
+  @extend %flex_centered;
+
+  background-color: rgba(0, 120, 255, 0.3);
+
+  div {
+    @extend %flex_column;
+    @extend %flex_centered;
+
+    background-color: rgba(120, 120, 0, 0.2);
+    width: 80%;
+    height: 80%;
+
+    span {
+      text-align: center;
+    }
+  }
+}
